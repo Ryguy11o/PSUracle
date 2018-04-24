@@ -16,18 +16,26 @@ import javax.swing.SwingConstants;
  */
 public class AnswerLabel extends JLabel {
 
-    public AnswerLabel(String string) {
-        super(string);
-        if(!"".equals(string)){
+    private String answer;
+    
+    public AnswerLabel(String number, String answer) {
+        super(number);
+        this.answer = answer;
+        if(number != ""){
         this.setBorder(BorderFactory.createLineBorder(Color.white, 4));
         this.setHorizontalAlignment(SwingConstants.CENTER);
         this.setVerticalAlignment(SwingConstants.CENTER);
         this.setOpaque(true);
-        this.setBackground(Color.BLUE);
+        this.setBackground(Color.ORANGE);
         } else{
            
         }
     }
+    
+   public void showAnswer() {
+       this.setText(answer);
+       this.setBackground(Color.white);
+   }
     
     
 }

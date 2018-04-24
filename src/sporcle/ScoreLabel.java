@@ -15,14 +15,21 @@ import javax.swing.SwingConstants;
  * @author Ryan
  */
 public class ScoreLabel  extends JLabel {
-
-    public ScoreLabel(String string) {
-        super(string);
+        
+        int score = 0; 
+    
+    public ScoreLabel(int x) {
+        super("Score: 0/" + x); 
+        
         this.setBorder(BorderFactory.createLineBorder(Color.black, 4));
         this.setHorizontalAlignment(SwingConstants.CENTER);
         this.setVerticalAlignment(SwingConstants.CENTER);
         this.setOpaque(true);
         this.setBackground(Color.WHITE);
     }
-    
+
+    public void increaseScore() {
+        score++;
+        this.setText("Score: " + score + "/");
+    }
 }

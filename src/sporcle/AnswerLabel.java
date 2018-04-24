@@ -18,7 +18,7 @@ public class AnswerLabel extends JLabel {
 
     public AnswerLabel(String string) {
         super(string);
-        if(string != ""){
+        if(!"".equals(string)){
         this.setBorder(BorderFactory.createLineBorder(Color.white, 4));
         this.setHorizontalAlignment(SwingConstants.CENTER);
         this.setVerticalAlignment(SwingConstants.CENTER);

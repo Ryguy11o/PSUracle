@@ -51,15 +51,16 @@ public class ScoreLabelTest {
         assertEquals("The score board failed to increase", expectedScore, instance.score);
     }
     
+    @Test
     public void testScoreCompleted() {
         System.out.println("Testing method increaseScore");
         ScoreLabel instance = new ScoreLabel(10);
-        String expectedMessage = "Congradulations you win!!";
+        String expectedMessage = "Congratulations you won!!";
         int score = 10;
         for(int i = 0; i < score; i++){
             instance.increaseScore();
         }
-        assertEquals("The score board failed to show message", expectedMessage, instance.score);
+        assertEquals("The score board failed to show message", expectedMessage, instance.getText());
     }
     
 }

@@ -5,12 +5,12 @@
  */
 package sporcle;
 
+import java.util.Timer;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -19,6 +19,8 @@ import static org.junit.Assert.*;
 public class Quiz_timerTest {
     
     public Quiz_timerTest() {
+        int time;
+        Timer t;
     }
     
     @BeforeClass
@@ -46,7 +48,6 @@ public class Quiz_timerTest {
         Quiz_timer instance = null;
         instance.setMinutesAndSeconds();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -55,10 +56,9 @@ public class Quiz_timerTest {
     @Test
     public void testSetTime() {
         System.out.println("setTime");
-        Quiz_timer instance = null;
-        instance.setTime();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Quiz_timer instance = new Quiz_timer(0);
+        instance.setTime();        
+        
     }
     
 }

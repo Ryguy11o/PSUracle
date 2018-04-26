@@ -5,8 +5,11 @@
  */
 package sporcle;
 
+import java.awt.Color;
+import javax.swing.JLabel;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -43,10 +46,12 @@ public class AnswerLabelTest {
     @Test
     public void testShowAnswer() {
         System.out.println("showAnswer");
-        AnswerLabel instance = null;
+        AnswerLabel instance = new AnswerLabel("1", "Test");
         instance.showAnswer();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        JLabel test = new JLabel();
+        test.setBackground(Color.white);
+        Assert.assertEquals("Failed to show all answers",instance.getBackground(), test.getBackground());
+        
     }
     
 }

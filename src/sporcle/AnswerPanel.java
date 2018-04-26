@@ -17,6 +17,7 @@ import java.util.ArrayList;
 class AnswerPanel extends JPanel{
     
     ArrayList<AnswerLabel> list = new ArrayList<>();
+    public boolean quizStopped = false;
     public ControlPanel control;
     public AnswerPanel() {
         
@@ -62,7 +63,7 @@ class AnswerPanel extends JPanel{
 
     public void showAll() {
         list.stream().forEach((label) -> {
-            label.showAnswer();
+            label.showAnswerNoIncrease();
         });
     }
     

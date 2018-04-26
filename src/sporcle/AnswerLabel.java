@@ -40,6 +40,11 @@ public class AnswerLabel extends JLabel {
        controller.sc.increaseScore();
        
    }
+   
+   public void showAnswerNoIncrease(){
+       this.setText(answer);
+       this.setBackground(Color.white);
+   }
     
     
 }

@@ -18,16 +18,18 @@ import javax.swing.JTextField;
 public class UserInput extends JTextField implements KeyListener  {
     
     ArrayList<AnswerLabel> answer_list;
-    public UserInput( ArrayList<AnswerLabel> answer_list) {
+    AnswerPanel ans;
+    public UserInput(AnswerPanel answer_panel) {
         super("Type Here"); 
-        this.answer_list = answer_list;
+        ans = answer_panel;
+        this.answer_list = answer_panel.list;
         addKeyListener(this);
   }
 
     @Override
     public void keyTyped(KeyEvent ke) {    
           for(AnswerLabel answer: answer_list){
-              if(answer.answer.equalsIgnoreCase(this.getText())){
+              if(answer.answer.equalsIgnoreCase(this.getText()) && !ans.quizStopped){
                   answer.showAnswer();
                   this.setText("");
               }

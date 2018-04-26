@@ -55,6 +55,7 @@ public class Quiz_timer extends JLabel {
         if(time == 0){
             t.cancel();
             this.answer_panel.showAll();
+            this.answer_panel.quizStopped = true;
         } 
         
         

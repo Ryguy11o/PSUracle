@@ -19,7 +19,7 @@ import javax.swing.JTextField;
 class ControlPanel extends JPanel {
     public ScoreLabel sc;
     public ControlPanel(AnswerPanel answer_panel) {
-        UserInput user_input = new UserInput(answer_panel.list);
+        UserInput user_input = new UserInput(answer_panel);
         this.setBackground(Color.white);
         this.setLayout(new GridLayout(3,3));
         JLabel title = new JLabel("Penn State Bars", JLabel.CENTER);

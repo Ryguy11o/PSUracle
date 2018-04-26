@@ -17,9 +17,11 @@ import javax.swing.SwingConstants;
 public class AnswerLabel extends JLabel {
 
     public String answer;
+    private ControlPanel controller;
     
-    public AnswerLabel(String  number, String answer) {
+    public AnswerLabel(String  number, String answer, ControlPanel control) {
         super(number);
+        controller = control;
         this.answer = answer;
         if(number != ""){
         this.setBorder(BorderFactory.createLineBorder(Color.white, 4));
@@ -35,6 +37,8 @@ public class AnswerLabel extends JLabel {
    public void showAnswer() {
        this.setText(answer);
        this.setBackground(Color.white);
+       controller.sc.increaseScore();
+       
    }
     
     

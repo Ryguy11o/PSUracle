@@ -19,6 +19,8 @@ class QuizFrame extends JFrame {
         super(name);
         answer_panel = new AnswerPanel();
          control_panel = new ControlPanel(answer_panel);
+         answer_panel.control = control_panel;
+         answer_panel.init();
         this.setLayout(new GridLayout(2,1));
         add(control_panel);
         add(answer_panel);

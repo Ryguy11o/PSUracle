@@ -21,10 +21,12 @@ public class Quiz_timer extends JLabel {
     private int seconds;
     private int time;
     private Timer t;
+    private AnswerPanel answer_panel;
     
-    public Quiz_timer(int time) {
+    public Quiz_timer(int time, AnswerPanel answer_panel) {
         super();
         this.time = time;
+        this.answer_panel = answer_panel;
         this.setMinutesAndSeconds();
         this.setBorder(BorderFactory.createLineBorder(Color.black, 4));
         this.setHorizontalAlignment(SwingConstants.CENTER);
@@ -52,7 +54,7 @@ public class Quiz_timer extends JLabel {
     public void setTime(){
         if(time == 0){
             t.cancel();
-            
+            this.answer_panel.showAll();
         } 
         
         

@@ -17,9 +17,11 @@ import javax.swing.SwingConstants;
 public class ScoreLabel  extends JLabel {
         
         int score = 0; 
+        int outOf;
     
     public ScoreLabel(int x) {
         super("Score: 0/" + x); 
+        outOf = x;
         
         this.setBorder(BorderFactory.createLineBorder(Color.black, 4));
         this.setHorizontalAlignment(SwingConstants.CENTER);
@@ -30,6 +32,10 @@ public class ScoreLabel  extends JLabel {
 
     public void increaseScore() {
         score++;
-        this.setText("Score: " + score + "/");
+        if(score == outOf){
+            this.setText("Congratulations you won!!");
+        } else {
+        this.setText("Score: " + score + "/" + outOf);
+        }
     }
 }

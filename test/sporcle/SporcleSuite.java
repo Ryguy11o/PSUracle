@@ -17,7 +17,7 @@ import org.junit.runners.Suite;
  * @author kylemullen
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({sporcle.ScoreLabelTest.class, sporcle.Quiz_timerTest.class, sporcle.AnswerLabelTest.class})
+@Suite.SuiteClasses({sporcle.ScoreLabelTest.class, sporcle.AnswerLabelTest.class})
 public class SporcleSuite {
 
     @BeforeClass

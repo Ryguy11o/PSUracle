@@ -46,12 +46,13 @@ public class AnswerLabelTest {
     @Test
     public void testShowAnswer() {
         System.out.println("showAnswer");
-        AnswerLabel instance = new AnswerLabel("1", "Test");
+        AnswerPanel answer = new AnswerPanel();
+        ControlPanel controller = new ControlPanel(answer);
+        AnswerLabel instance = new AnswerLabel("1", "Test", controller);
         instance.showAnswer();
         JLabel test = new JLabel();
         test.setBackground(Color.white);
         Assert.assertEquals("Failed to show all answers",instance.getBackground(), test.getBackground());
-        
     }
     
 }

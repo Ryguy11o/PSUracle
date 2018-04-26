@@ -6,6 +6,7 @@
 package sporcle;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -17,13 +18,16 @@ import javax.swing.JTextField;
  */
 class ControlPanel extends JPanel {
 
-    public ControlPanel() {
+    public ControlPanel(AnswerPanel answer_panel) {
+        UserInput user_input = new UserInput(answer_panel.list);
         this.setBackground(Color.white);
         this.setLayout(new GridLayout(3,3));
-        this.add(new JLabel("Title of Quiz"));
+        JLabel title = new JLabel("Penn State Bars", JLabel.CENTER);
+        title.setFont(new Font("Serif", Font.BOLD, 27));
         this.add(new AnswerLabel("",""));
+        this.add(title);
         this.add(new AnswerLabel("",""));
-        this.add(new UserInput());
+        this.add(user_input);
         this.add(new ScoreLabel(10));
         this.add(new Quiz_timer(60));
         this.add(new AnswerLabel("",""));

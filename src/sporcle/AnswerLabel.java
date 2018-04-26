@@ -16,9 +16,9 @@ import javax.swing.SwingConstants;
  */
 public class AnswerLabel extends JLabel {
 
-    private String answer;
+    public String answer;
     
-    public AnswerLabel(String number, String answer) {
+    public AnswerLabel(String  number, String answer) {
         super(number);
         this.answer = answer;
         if(number != ""){

@@ -20,6 +20,8 @@ public class Quiz_timer extends JLabel {
     private int minutes;
     private int seconds;
     private int time;
+    private Timer t;
+    
     public Quiz_timer(int time) {
         super();
         this.time = time;
@@ -30,7 +32,7 @@ public class Quiz_timer extends JLabel {
         this.setOpaque(true);
         this.setBackground(Color.WHITE);
         this.setTime();
-        Timer t = new Timer();
+        t = new Timer();
         t.schedule(new TimerTask() {
         @Override
             public void run() {
@@ -48,6 +50,12 @@ public class Quiz_timer extends JLabel {
     }
     
     public void setTime(){
+        if(time == 0){
+            t.cancel();
+            
+        } 
+        
+        
         String second_text;
         if(seconds == 0){
             second_text = "00";

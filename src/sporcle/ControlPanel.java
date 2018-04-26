@@ -29,7 +29,7 @@ class ControlPanel extends JPanel {
         this.add(new AnswerLabel("",""));
         this.add(user_input);
         this.add(new ScoreLabel(10));
-        this.add(new Quiz_timer(60));
+        this.add(new Quiz_timer(10));
         this.add(new AnswerLabel("",""));
         this.add(new AnswerLabel("",""));
         this.add(new AnswerLabel("",""));
